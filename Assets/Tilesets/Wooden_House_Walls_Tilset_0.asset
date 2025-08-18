@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Wooden_House_Walls_Tilset_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1659787534, guid: 4be3d82e7976849dbb33f5ec53dafa0b, type: 3}
+  m_Sprite: {fileID: -50732972, guid: b75ee44ce65494eb2b5e1c7290b36dcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

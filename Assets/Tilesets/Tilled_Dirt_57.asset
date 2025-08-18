@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Tilled_Dirt_57
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1015497364, guid: ed66d03e520744b51b2c5968ae0cb365, type: 3}
+  m_Sprite: {fileID: 57786687, guid: c302f2779169141159a6f2d6e5d2dd82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

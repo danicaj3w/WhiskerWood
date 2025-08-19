@@ -9,8 +9,8 @@ public class StaminaBar : MonoBehaviour
     public float maxStamina = 100f;
     public float currentStamina;
     public float staminaDrainRate = 10f; 
-    public float staminaRegenRate = 5f; 
-    public float regenDelay = 2f;
+    // public float staminaRegenRate = 5f; 
+    // public float regenDelay = 2f;
 
     private Coroutine regenCoroutine;
 
@@ -38,11 +38,12 @@ public class StaminaBar : MonoBehaviour
         }
     }
 
-    public void StartRegen()
+    public void StartRegen(float regenDelay, float staminaRegenRate)
     {
         if (regenCoroutine == null)
         {
-            regenCoroutine = StartCoroutine(RegenStamina());
+            Debug.Log("Starting Regen tier list");
+            regenCoroutine = StartCoroutine(RegenStamina(regenDelay, staminaRegenRate));
         }
     }
 
@@ -51,8 +52,14 @@ public class StaminaBar : MonoBehaviour
         return currentStamina;
     }
 
-    IEnumerator RegenStamina()
+    public void AddStamina(int stamina)
     {
+        currentStamina += stamina;
+    }
+
+    IEnumerator RegenStamina(float regenDelay, float staminaRegenRate)
+    {
+        Debug.Log("Current stamina values: " + currentStamina);
         // Wait before starting regeneration
         yield return new WaitForSeconds(regenDelay);
 

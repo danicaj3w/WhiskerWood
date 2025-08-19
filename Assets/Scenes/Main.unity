@@ -23677,6 +23677,7 @@ GameObject:
   - component: {fileID: 1205222954}
   - component: {fileID: 1205222955}
   - component: {fileID: 1205222956}
+  - component: {fileID: 1205222957}
   m_Layer: 0
   m_Name: Picnic Blanket
   m_TagString: Untagged
@@ -23796,6 +23797,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1205222957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205222953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320c707f2159a4257ba7a03ef2c6072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 2024406614}
 --- !u!1 &1233097562
 GameObject:
   m_ObjectHideFlags: 0
@@ -27941,7 +27955,7 @@ Transform:
   m_GameObject: {fileID: 1559848611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 0.42, z: 0.05092577}
+  m_LocalPosition: {x: -24.15, y: -4.16, z: 0.05092577}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27987,7 +28001,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1582258192, guid: 1e1155c2e49fb4bfab34661ba5796301, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -28074,8 +28088,6 @@ MonoBehaviour:
   maxStamina: 100
   currentStamina: 0
   staminaDrainRate: 10
-  staminaRegenRate: 5
-  regenDelay: 2
 --- !u!1 &1672235513
 GameObject:
   m_ObjectHideFlags: 0
@@ -30277,7 +30289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1729436164
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -99395,6 +99407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024406613}
+  - component: {fileID: 2024406614}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -99417,6 +99430,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024406614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024406611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2e028e53f9b48f19924914cb94e98e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBar: {fileID: 1579809791}
 --- !u!1 &2037990094
 GameObject:
   m_ObjectHideFlags: 0
@@ -99541,7 +99567,7 @@ Transform:
   m_GameObject: {fileID: 2037990094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1854534, y: -3.050806, z: 0.09350119}
+  m_LocalPosition: {x: 9.77, y: -3.73, z: 0.09350119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99564,12 +99590,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -944628639613478452, guid: f2aed9423dfb94b95b00badf5cc64203, type: 3}
     - target: {fileID: 2188927209040688104, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2024406614}
+    - target: {fileID: 2188927209040688104, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1579809791}
     - target: {fileID: 4612624765263278706, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433798766669335401, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.96348065
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433798766669335401, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: m_Size.y
+      value: 1.221269
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433798766669335401, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.012889227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433798766669335401, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.012889227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433798766669335401, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8601977013377135463, guid: 0eb9c51c7fdfb4d9e808be71999030c4, type: 3}
       propertyPath: m_LocalScale.x

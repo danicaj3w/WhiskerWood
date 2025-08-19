@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] StaminaBar staminaBar;
+    [SerializeField] GameManager gm;
 
     private Vector2 moveInput;
     private Rigidbody2D rb;
@@ -14,11 +14,6 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        if (staminaBar == null)
-        {
-            Debug.LogWarning("Movement: Missing stamina bar!");
-        }
     }
 
     public void OnMove(InputValue value)
@@ -28,7 +23,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float moveMultiplier = staminaBar.GetCurrentStamina() > 0 ? moveSpeed : moveSpeed / 2f;
+        float moveMultiplier = gm.GetCurrentStamina() > 0 ? moveSpeed : moveSpeed / 2f;
         rb.velocity = moveInput * moveMultiplier;
         AnimateMovement();
     }
@@ -39,15 +34,15 @@ public class Movement : MonoBehaviour
         {
             if (moveInput.magnitude > 0)
             {
-                staminaBar.DrainStamina();
+                gm.DrainStamina();
                 animator.SetBool("isMoving", true);
                 animator.SetFloat("horizontal", moveInput.x);
                 animator.SetFloat("vertical", moveInput.y);
             }
             else
             {
+                gm.StartRegen(2f, 5f);
                 animator.SetBool("isMoving", false);
-                staminaBar.StartRegen();
             }
         }
     }

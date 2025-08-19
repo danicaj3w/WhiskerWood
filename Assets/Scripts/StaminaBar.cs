@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class Stamina : MonoBehaviour
+public class StaminaBar : MonoBehaviour
 {
     public Image staminaBarFill;
     
@@ -20,19 +20,7 @@ public class Stamina : MonoBehaviour
         UpdateStaminaBar();
     }
 
-    void Update()
-    {
-        // Example: Drain stamina while a button is held down (e.g., 'Left Shift' for sprinting)
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            DrainStamina();
-        }
-        else
-        {
-            StartRegen();
-        }
-    }
-
+    // DrainStamina and StartRegen called when the player is moving
     public void DrainStamina()
     {
         if (currentStamina > 0)
@@ -70,7 +58,6 @@ public class Stamina : MonoBehaviour
 
         while (currentStamina < maxStamina)
         {
-            // Regenerate stamina
             currentStamina += staminaRegenRate * Time.deltaTime;
             currentStamina = Mathf.Min(currentStamina, maxStamina);
             UpdateStaminaBar();

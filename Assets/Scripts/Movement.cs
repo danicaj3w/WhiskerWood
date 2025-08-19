@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] Stamina staminaBar;
+    [SerializeField] StaminaBar staminaBar;
 
     private Vector2 moveInput;
     private Rigidbody2D rb;

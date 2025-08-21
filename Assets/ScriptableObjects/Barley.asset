@@ -15,4 +15,10 @@ MonoBehaviour:
   cropName: Barley
   sellPrice: 10
   timeToGrow: 0
-  growthStages: []
+  growthStages:
+  - {fileID: -2082665606, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -766240802, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -1690254827, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -1690581191, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  seedImg: {fileID: -1521406030, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}
+  cropImg: {fileID: 2106060764, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}

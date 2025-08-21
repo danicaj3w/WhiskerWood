@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1310405058d4b17970fe1622762566, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  cropName: 
+  cropName: Pumpkin
   sellPrice: 0
   timeToGrow: 0
-  growthStages: []
+  growthStages:
+  - {fileID: 45425481, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: 331162399, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -182333825, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: 966859392, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  seedImg: {fileID: -1213845579, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}
+  cropImg: {fileID: -1075306974, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}

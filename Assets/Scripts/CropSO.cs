@@ -7,4 +7,16 @@ public class CropSO : ScriptableObject
     public int sellPrice;
     public float timeToGrow;
     public Sprite[] growthStages;
+    public Sprite seedImg;
+    public Sprite cropImg;
+
+    public Sprite GetSeedImg()
+    {
+        return seedImg;
+    }
+    
+    public Sprite GetCropImg()
+    {
+        return cropImg;
+    }
 }

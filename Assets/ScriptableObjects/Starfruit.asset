@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1310405058d4b17970fe1622762566, type: 3}
   m_Name: Starfruit
   m_EditorClassIdentifier: 
-  cropName: 
+  cropName: Starfruit
   sellPrice: 0
   timeToGrow: 0
-  growthStages: []
+  growthStages:
+  - {fileID: 423412093, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: 714291820, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -121175817, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -891115483, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  seedImg: {fileID: 944596669, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}
+  cropImg: {fileID: -1269642495, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}

@@ -15,4 +15,10 @@ MonoBehaviour:
   cropName: Cauliflower
   sellPrice: 30
   timeToGrow: 4
-  growthStages: []
+  growthStages:
+  - {fileID: 1770773830, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: 217650635, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: -746509927, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  - {fileID: 1966861584, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  seedImg: {fileID: 1371557511, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}
+  cropImg: {fileID: 1525533856, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}

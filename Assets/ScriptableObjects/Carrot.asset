@@ -20,3 +20,5 @@ MonoBehaviour:
   - {fileID: 1057445657, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
   - {fileID: 237225980, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
   - {fileID: 1485568745, guid: 2e3efc408fe7f4446b790b6f98c006a4, type: 3}
+  seedImg: {fileID: 2096283459, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}
+  cropImg: {fileID: 95900716, guid: a7a7cfed9578a4bec91692e9d23508d8, type: 3}

@@ -31,17 +31,12 @@ public class Inventory : MonoBehaviour
         // Disable raycasts on the original item so we can click through it
         item.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
-        if (itemPrefab != null)
-        {
-            Debug.LogWarning("Inventory: itemPrefab is null!");
-        }
-
         // Creates a copy of the item we're dragging
         visualDragObject = new GameObject("VisualDragItem", typeof(Image));
         visualDragObject.GetComponent<Image>().sprite = item.GetComponent<Image>().sprite;
         visualDragObject.GetComponent<Image>().SetNativeSize();
 
-        visualDragObject.transform.SetParent(transform); // Note that the crop needs to be inside the parent canvas
+        visualDragObject.transform.SetParent(transform); // Note that the parent needs to be a Canvas to render
         visualDragObject.transform.localScale = item.transform.localScale;
         visualDragObject.transform.position = eventData.position;
     }
@@ -52,27 +47,19 @@ public class Inventory : MonoBehaviour
         {
             visualDragObject.transform.position = eventData.position;
 
-            // Perform a raycast to find the tile under the cursor
-            List<RaycastResult> results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(eventData, results);
-            
-            foreach (RaycastResult result in results)
+            // Find the tile under the cursor
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(eventData.position);
+            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+
+            if (hit.collider != null && hit.collider.gameObject == tilemapManager.GetPlantableTilemap().gameObject)
             {
-                if (!plantedTiles.Contains(result.gameObject))
-                {
-                    Debug.Log("Hovering over a plantable tile!");
-                    Vector3 worldPosition = result.gameObject.transform.position;
-                    
-                    tilemapManager.PlantOnTile(worldPosition, currentDraggedItem.GetCropSO());
-                    plantedTiles.Add(result.gameObject);
-                }
+                tilemapManager.PlantOnTile(worldPosition, currentDraggedItem.GetCropSO());
             }
         }
     }
 
     public void EndDrag(PointerEventData eventData)
     {
-        // Re-enable raycasts on the original item.
         if (currentDraggedItem != null)
         {
             currentDraggedItem.GetComponent<CanvasGroup>().blocksRaycasts = true;
@@ -81,7 +68,7 @@ public class Inventory : MonoBehaviour
         // Destroy the clone
         if (visualDragObject != null)
         {
-            // Destroy(visualDragObject);
+            Destroy(visualDragObject);
         }
 
         currentDraggedItem = null;

@@ -1,35 +1,32 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] Image shop;
-    [SerializeField] CoinManager coinManager;
+    [SerializeField] GameObject buttonPrefab;
 
-    void Start()
+    public void Start()
     {
-
+        gameObject.SetActive(false);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void InitializeShop(CropSO[] allCrops)
     {
-        // Open up the shop and set it to active
-        shop.gameObject.SetActive(true);
+        // Initialize button prefabs and fill in the appropriate information
+        foreach (CropSO crop in allCrops)
+        {
+            GameObject button = Instantiate(buttonPrefab, transform);
+            ShopButton shopButton = button.GetComponent<ShopButton>();
+            shopButton.InitializeButton(crop);
+        }
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    public void Show()
     {
-        // 
-        shop.gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 
-    public void AddCoins(int amount)
+    public void Hide()
     {
-        coinManager.Add(amount);
-    }
-
-    public void SubtractCoins(int amount)
-    {
-        coinManager.Subtract(amount);
+        gameObject.SetActive(false);
     }
 }

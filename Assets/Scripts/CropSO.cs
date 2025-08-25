@@ -4,6 +4,7 @@ using UnityEngine;
 public class CropSO : ScriptableObject
 {
     public string cropName;
+    public int buyPrice;
     public int sellPrice;
     public float timeToGrow;
     public Sprite[] growthStages;
@@ -14,9 +15,24 @@ public class CropSO : ScriptableObject
     {
         return seedImg;
     }
-    
+
     public Sprite GetCropImg()
     {
         return cropImg;
+    }
+
+    public string GetName()
+    {
+        return cropName;
+    }
+
+    public int GetBuyPrice()
+    {
+        return buyPrice;
+    }
+
+    public int GetSellPrice()
+    {
+        return sellPrice;
     }
 }

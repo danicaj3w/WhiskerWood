@@ -42,7 +42,7 @@ public class StaminaBar : MonoBehaviour
     {
         if (regenCoroutine == null)
         {
-            Debug.Log("Starting Regen tier list");
+            Debug.Log("Starting regen");
             regenCoroutine = StartCoroutine(RegenStamina(regenDelay, staminaRegenRate));
         }
     }

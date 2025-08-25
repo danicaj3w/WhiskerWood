@@ -45,3 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 0}
+  allCrops:
+  - {fileID: 11400000, guid: e41432e17544841b0bcac7e9e44cf44b, type: 2}
+  - {fileID: 11400000, guid: 79ba86d72c9c640a7805809a600a593e, type: 2}
+  - {fileID: 11400000, guid: 111d79c3dc1a0415cbd31ce5b545fc33, type: 2}
+  - {fileID: 11400000, guid: 1f896219c6f4e4565aec78320b288760, type: 2}
+  - {fileID: 11400000, guid: 542d5fb0dc74f4445bf0073ec0366174, type: 2}
+  - {fileID: 11400000, guid: f1ffecfea1d0a4b98865aa80b7d52abf, type: 2}
+  - {fileID: 11400000, guid: 1d6eb1f1a591e4542959b4b639f7c8a6, type: 2}
+  - {fileID: 11400000, guid: 74ed8d8a78d9d4d2da9d255695c28be0, type: 2}
+  - {fileID: 11400000, guid: fb57f2f7da9da4903b99b52f354c4017, type: 2}
+  - {fileID: 11400000, guid: a0ce3657c09554c7589b41033fdd3f43, type: 2}
+  - {fileID: 11400000, guid: 56224b787631d4e58b7b9ebcdeaad596, type: 2}
+  - {fileID: 11400000, guid: c863ef5402d514801a28599ca1d90960, type: 2}
+  - {fileID: 11400000, guid: 72f4fa75cbcdc4a5ba0a5a28b0310682, type: 2}
+  - {fileID: 11400000, guid: 0392231e1b0ab4581b987ac8c55622a0, type: 2}
+  shop: {fileID: 0}
+  coinManager: {fileID: 5271989526548559668, guid: 2ed102a13c8cf4a6090e10bf67515c3b, type: 3}
